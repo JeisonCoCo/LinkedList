@@ -43,9 +43,10 @@ while (option != "0");
 string Menu()
 {
     Console.WriteLine("Menu:");
-    Console.WriteLine("1. Insert at beginning");
-    Console.WriteLine("2. Insert at end");
+    Console.WriteLine("1. Insert at Beginning");
+    Console.WriteLine("2. Insert at End");
     Console.WriteLine("3. Insert value to Delete");
+    Console.WriteLine("4. Insert value to Remove");
     Console.WriteLine("5. Print list");
     Console.WriteLine("0. Exit");
     Console.Write("Choose an option:");
