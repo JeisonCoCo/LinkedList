@@ -1,13 +1,44 @@
 ﻿using LinkedList.Cor;
+using System.ComponentModel.Design;
 
 var list = new SinglyLinkedList<string>();
-list.InsertAtBeginning("Perro");
-list.InsertAtBeginning("Gato");
-list.InsertAtBeginning("Cabra");
-list.InsertAtBeginning("Vaca");
-list.InsertAtEnd("Tigre");
-list.InsertAtEnd("Hiena");
-list.InsertAtEnd("Ñu");
-list.InsertAtEnd("Cocodrilo");
 
-list.PrintList();
+
+var option = string.Empty;
+do
+{
+    Console.WriteLine("------------------------------------------------------------");
+    option = Menu();
+    switch (option)
+    {
+        case "0": Console.Write("Bye.");
+            break;
+        case "1": Console.Write("Enter the value: ");
+            list.InsertAtBeginning(Console.ReadLine()!);
+            break;
+        case "2": Console.Write("Enter the value: ");
+            list.InsertAtEnd(Console.ReadLine()!);
+            break;
+        case "3": 
+            list.PrintList();
+            break;
+        default:
+            Console.WriteLine("Invalid option.");
+            break;
+    }
+}
+while (option != "0");
+
+string Menu()
+{
+    Console.WriteLine("Menu:");
+    Console.WriteLine("1. Insert at beginning");
+    Console.WriteLine("2. Insert at end");
+    Console.WriteLine("3. Print list");
+    Console.WriteLine("0. Exit");
+    Console.Write("Choose an option:");
+    
+    return Console.ReadLine()!;
+}
+Console.WriteLine("");
+Console.WriteLine("------------------------------------------------------------");
